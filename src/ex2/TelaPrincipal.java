@@ -70,7 +70,6 @@ public class TelaPrincipal extends JFrame implements ActionListener {
 		
 		deskTop = new JDesktopPane();
 		deskTop.setBounds(0, 0, 714, 539);
-		deskTop.setVisible(true);
 		contentPane.add(deskTop);
 		
 		
@@ -84,6 +83,8 @@ public class TelaPrincipal extends JFrame implements ActionListener {
 			JFileChooser seletor = new JFileChooser();
 			seletor.setDialogTitle("Escolha uma Imagem");
 			
+			FileNameExtensionFilter filtro = new FileNameExtensionFilter("Imagens (JPG, PNG)", "jpg", "png");
+			seletor.setFileFilter(filtro);
 			
 			int retorno = seletor.showOpenDialog(null);
 			
