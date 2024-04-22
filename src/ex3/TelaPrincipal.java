@@ -11,7 +11,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 
-public class TelaPrincipal extends JFrame implements ActionListener{
+public class TelaPrincipal extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -39,13 +39,13 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 	public TelaPrincipal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 700, 460);
-		
+
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
-		
+
 		JMenu menuPrincpial = new JMenu("Menu");
 		menuBar.add(menuPrincpial);
-		
+
 		itemDialogo = new JMenuItem("Abrir Diálogo");
 		itemDialogo.addActionListener(this);
 		menuPrincpial.add(itemDialogo);
@@ -58,8 +58,7 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if(e.getActionCommand().equals("Abrir Diálogo"))
-		{
+		if (e.getActionCommand().equals("Abrir Diálogo")) {
 			DialQuest questionario = new DialQuest();
 			questionario.setVisible(true);
 		}
